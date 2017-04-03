@@ -1,4 +1,4 @@
-### LIST BANK###
+# LIST BANK
 # 'easy' level
 easy_quiz = ['Build strong','___1___','solving skills! Start with finding the','___2___','. Then find the','___3___',
             '. The only thing left to do now is to','___4___','the problem.']
@@ -14,7 +14,6 @@ hard_quiz = ['To change a','___1___','variable, it needs to be processed by a','
              '. Otherwise, it will remain ','___3___','to the original declaration. Process the variable change by',
              '___4___ ','it as a parameter or the function.']
 hard_answers = ['global','function','equal','calling']
-
 
 # Global lists that will be fed the correct lists after a level is selected by the user. The game_engine function will check
 # responses against these lists
@@ -110,4 +109,3 @@ def opening_prompt(quiz,answers):
 opening_prompt(quiz,answers)
 
 ### Travis Pinson
-### for Udacity 
