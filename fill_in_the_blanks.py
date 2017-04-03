@@ -1,29 +1,29 @@
 ### LIST BANK###
-# Lists to use for 'easy' level ########################################################################################
-easy_quiz = ['Build strong','___1___','solving skills! Start with finding the','___2___','. Then find the','___3___','. The only thing left to do now is to','___4___','the problem.']
+# 'easy' level
+easy_quiz = ['Build strong','___1___','solving skills! Start with finding the','___2___','. Then find the','___3___',
+            '. The only thing left to do now is to','___4___','the problem.']
 easy_answers = ['problem','inputs','outputs','solve']
 
-# Lists to use for 'medium' level #####################################################################################
-medium_quiz = ['Defining a','___1___','is important to coding in','___2___','. Learning that your','___3___','arent global until you call the function with its','___4___','is equally important!']
+# 'medium' level
+medium_quiz = ['Defining a','___1___','is important to coding in','___2___','. Learning that your','___3___',
+               'arent global until you call the function with its','___4___','is equally important!']
 medium_answers = ['function','python','variables','parameters']
 
-# Lists to use for 'hard' level ########################################################################################
-hard_quiz = ['To change a','___1___','variable, it needs to be processed by a',' ___2___','. Otherwise, it will remain ','___3___','to the original declaration. Process the variable change by','___4___ ','it as a parameter or the function.']
+# 'hard' level
+hard_quiz = ['To change a','___1___','variable, it needs to be processed by a',' ___2___',
+             '. Otherwise, it will remain ','___3___','to the original declaration. Process the variable change by',
+             '___4___ ','it as a parameter or the function.']
 hard_answers = ['global','function','equal','calling']
 
-########################################################################################################################
+
 # Global lists that will be fed the correct lists after a level is selected by the user. The game_engine function will check
 # responses against these lists
 quiz = []
 answers = []
 
 
-
-########################################################################################################################
-# Inputs: User is prompted to respond if they want to play again.
-# Outputs: If user elects to play again, global variables quiz and answers are emptied and user is returned to the
-            # opening prompt to play again
-
+# Inputs: User is prompted to play again. # Outputs: If user elects to play again, global variables quiz and
+# answers are emptied and user is returned to the opening prompt
 def next_level():
     play_more = ['Y','y','Yes','YES','ok','OK','yeah']
     dont_play_more = ['N','n','No','NO','nah','NAH', 'nope']
@@ -38,10 +38,10 @@ def next_level():
         print "Invalid selection. Try again."
         return next_level()
 
-########################################################################################################################
+
 # Inputs: global variable lists: quiz and answers
-# Outputs: global quiz variable printed with a .join.  After replacing the blank with the corresponding word from
-    # the global answers list. Once blanks are filled, user is referred to next_level function
+# Outputs: global quiz variable printed with a .join. after replacing the blank with the corresponding word from
+# the global answers list. Once blanks are filled, user is referred to next_level function
 # quiz inserts replacement at odd numbered locations to correspond with every/other for BlahBlah,___,BlahBlah,___,etc
 def game_engine(quiz,answers):
     blank_one = quiz[1]
@@ -81,10 +81,9 @@ def game_engine(quiz,answers):
         print 'incorrect. Try again.'
         return game_engine(quiz,answers)
 
-########################################################################################################################
+
 # Inputs: user is prompted for response for difficulty.
 # Outputs: based on difficulty chosen, the global quiz list and answers list will be populated with the correct contents.
-
 def opening_prompt(quiz,answers):
     response = raw_input('Choose a difficulty: ( easy | medium | hard ): ')
     while response == 'easy':
@@ -106,7 +105,7 @@ def opening_prompt(quiz,answers):
         print 'incorrect, Try again.'
         return opening_prompt(quiz,answers)
 
-########################################################################################################################
+
 # We will start the game by launching the opening_prompt function
 opening_prompt(quiz,answers)
 
