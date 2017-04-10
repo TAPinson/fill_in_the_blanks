@@ -1,0 +1,1 @@
+To change a ___1___ variable, it needs to be processed by a ___2___. Otherwise, it will remain ___3___ to the original declaration. Process the variable change by ___4___ it as a parameter or the function.

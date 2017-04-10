@@ -1,0 +1,1 @@
+Defining a ___1___ is important for coding in ___2___ Learning that your ___3___ arent global until you call the function with its ___4___is equally important!
